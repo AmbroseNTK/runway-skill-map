@@ -1,0 +1,229 @@
+frontend: Frontend {
+  style: {
+    fill: "#fff"
+    stroke-dash: 3
+  }
+  internet: Internet
+  internet_1: How does the internet work? {
+    link: https://apple.com
+    style: {
+      fill: "orange"
+    }
+  }
+  internet_2: What is HTTP? {
+    style: {
+      fill: "orange"
+    }
+  }
+  internet_3: What is Domain Name? {
+    style: {
+      fill: "orange"
+    }
+  }
+  internet_4: What is hosting? {
+    style: {
+      fill: "orange"
+    }
+  }
+  internet_5: DNS and how it works? {
+    style: {
+      fill: "orange"
+    }
+  }
+  internet_6: Browser and how they work? {
+    style: {
+      fill: "orange"
+    }
+  }
+
+  internet -- internet_1: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  internet -- internet_2: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  internet -- internet_3: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  internet -- internet_4: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  internet -- internet_5: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  internet -- internet_6: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  html: HTML
+
+  html_1: "Learn the basics" {
+    style: {
+      fill: "orange"
+    }
+  }
+
+  html_2: "Writing Semantic HTML" {
+    style: {
+      fill: "orange"
+    }
+  }
+
+  html_3: "Accessibility" {
+    style: {
+      fill: "orange"
+    }
+  }
+
+  html_4: "SEO Basics" {
+    style: {
+      fill: "orange"
+    }
+  }
+
+  html -- html_1: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  html -- html_2: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  html -- html_3: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  html -- html_4: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  css: CSS
+
+  css_1: "Learn the basics" {
+    style: {
+      fill: "orange"
+    }
+  }
+
+  css_2: "Making Layouts" {
+    style: {
+      fill: "orange"
+    }
+  }
+
+  css_3: "Responsive Design" {
+    style: {
+      fill: "orange"
+    }
+  }
+
+  css -- css_1: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  css -- css_2: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  css -- css_3: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  js: Javascript
+
+  js_1: Learn the Basics {
+    style: {
+      fill: "orange"
+    }
+  }
+
+  js_2: Learn DOM Manipulation {
+    style: {
+      fill: "orange"
+    }
+  }
+
+  js_3: Fetch API/ Ajax (XHR) {
+    style: {
+      fill: "orange"
+    }
+  }
+
+  js -- js_1: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  js -- js_2: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  js -- js_3: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  vcshosting: VCS Hosting
+  vcs: Version Control Systems
+
+  vcs_1: Git {
+    style: {
+      fill: "orange"
+    }
+  }
+
+  vcs -- vcs_1: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  internet -> html
+
+  html -> css
+  css -> js
+  js -> vcshosting
+  vcshosting -> vcs
+}
+
+start: Start Roadmap
+end: End Roadmap
+
+start -> frontend.internet
+
+frontend.vcs -> end

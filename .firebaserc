@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "runway-skill-map": {
+      "hosting": {
+        "skillmap": [
+          "runway-skill-map"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "runway-skill-map"
+  }
+}

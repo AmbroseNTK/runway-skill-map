@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	d2Version="v0.6.0-HEAD" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1618 2221"><svg id="d2-svg"
+		class="d2-3861335636" width="1618" height="2221" viewBox="-101 -101 1618 2221">
+		<rect x="-101.000000" y="-101.000000" width="1618.000000" height="2221.000000" rx="0.000000" class=" fill-N7"
+			stroke-width="0" />
+		<style type="text/css">
+			<![CDATA[
+			.appendix-icon {
+				filter: drop-shadow(0px 0px 32px rgba(31, 36, 58, 0.1));
+			}
+
+			.d2-3861335636 .text-mono {
+				font-family: "d2-3861335636-font-mono";
+			}
+
+			@font-face {
+				font-family: d2-3861335636-font-mono;
+				src: url("data:application/font-woff;base64,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");
+			}
+
+			.d2-3861335636 .text-mono-bold {
+				font-family: "d2-3861335636-font-mono-bold";
+			}
+
+			@font-face {
+				font-family: d2-3861335636-font-mono-bold;
+				src: url("data:application/font-woff;base64,d09GRgABAAAAABIUAAwAAAAAHhQAAQScAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABHAAAAGAAAABgmKbWhWNtYXAAAAF8AAAAtAAAAPoFcAYQZ2FzcAAAAjAAAAAIAAAACAAAABBnbHlmAAACOAAACW8AAAyQgS7uSWhlYWQAAAuoAAAANgAAADYbI9ohaGhlYQAAC+AAAAAkAAAAJAYzAL9obXR4AAAMBAAAAH0AAACsZMgLIWxvY2EAAAyEAAAAWAAAAFhBykUCbWF4cAAADNwAAAAgAAAAIABfAmpuYW1lAAAM/AAABO8AAA2sAwZtKnBvc3QAABHsAAAAIAAAACD/uAAzcHJlcAAAEgwAAAAHAAAAB2gGjIUABAJYArwABQAAAooCWAAAAEsCigJYAAABXgAyAR4AAAILAwkDBAMCAgQgAAL3AgA4AwAAAAAAAAAAQURCTwCgACD//wPY/u8AAAQkAcZgAAGfAAAAAAHeApQAAAAgAAN4nITNuS50AQCG4efMnP+3jX3fj7HNKIhWI+5AdEoRiYKQcF9CIui4FJ1CNAqF4pMoROetn+RFoa5AQ+kNTZVSTaVt3YZNW7bt2nfg0JFjp85dJqi0fpkdez/mxJmLJM/kI595z2te8pTHPOQ+d7nNTa5z9X3+q0JL27I1S1asqqkr/fNfh05duvVo6NWn34BBQ4aNGDVm3IRJU6bNmDVnXmVB0yJfAAAA//8BAAD//wo3LWcAAQAB//8AD3icjFZrbBtl1j7vO66dJq6TiT2exHY8tseeceK7x5fEiRPHcVLnfiGpm0uTtlAENIGQpE2/r+53WZbdsjvhFkrTQhESVNqb2EIXlru0gl1pi7RCFdofLCtWLNAf+6dI5s8qGa9mxm0piNX+ed+RfN5znnPOcx4f2AUsAI7jp4CA3aCHeqAAVkkn6RF4ntXpkjwtJJMsg0kW10sXX/R6Nc3FhYWLGh+zxRybx0/tLM4OHz685403lxfa23/+BloFwLAbAI9iEfYACbBqFIwswXE8q9XqCD7upHZ/cOmDZyf1Nr1Gb9kzVYdasbizhgYi9wvC/RHptWdWV4GAAQAcxSKQYJExrpJC1GymTFodpVxalhCiiXiMY1nyxsfAX3KLXYlUXz774N7Z7kQ4EsuOdqRSHaNYbOrr8k/UavSD2exUM/qRz+NmpBm/38cBAIJEuYRTeAvsAL2uII7HEgkhaqZ1HMe6tFrKZDYL0USS1mrRXemlyfAdG4XOu5zjdNIdzLe0DEbcqYZx76K+ZerUxOK5ccExa24U5rt7FqIOy3QoAhj6AHAMi1CtVreSiZblhWhChs6xbN9vFjZGhn8y09wQG/L5hmINWMw9trz85N5179zIyLRHwTkHgM1YhBqlR5STEiiWclJz6JL0+VdfIQ6LxYdOPl1UbO8FwBYsyr24ZXsveln6rFTCYvFscQcUO3+5hFm8BU45d477ntzjbFwgtVpUuOP02Ngjk9l5ZpyK8i053tUnGNnqhb87l/SDZ+5fOjcmOGYpi5p+dfXyCekjJqzEyQDghhvYBUqICyRLsmRm85XNzVewuL29s4bqpOuKrdx7Q8VWtos7KZYUqIGtLfT+1lYRPVUsSotFFX97uYQ1WIR6BT+fVPDG5TekSatFZOKYb8qWcUSFMnoydK8+3DHLemI9iD8pTWTuy8g+MOQA8AQWoQr0CjpSMAqIEoikMXeG+N0L0rk/bxU+x6L0NaqRuFdQaFWaV2IfBcAOLMIu9ZWTOrqJXFjcuV7BlgLAdixCk/I7LY+SnE2sEydZnY7ledZOUFTqfMasMWfOFzVaHSai0bwQIrBOq8HitZmZaztrV6zj+8csL1248JJlbP+49YrqO1vhglHxbaQFjovLtSJ41mymqOzZR1o1u+o21AuL0tuPx/6v7drOGup9NH4qdU3JmyuXcBRvQS0wt3VfYSd/g5sVGiD/yPFs9viIerqiVmvUpZz6kbPLS2eGh88sLZ8d+d/IQl9uLhyey/UtROQYgwA4gkXQf4v7LHVzbgev7V3t7VvrnRxMt6fbB7HIz40OHQ79FU0korFmIJT5yVd8NH6fF2PSyPZd613p7V3pncyn0ulUvu3uDy9i0TM9PDgf+Ac6GAmHOemfC9Ljcv2i5RLm8RYEbuNNjON4/tsKIGdP03YsR0Qt2f+PT3mmQ6FAQ5CZdGf49NG97Sv+QVcu7A7awsyov9PV/qA+HDxi5xyNtJXa4zaEesOJQtzfcqDRam8yWkx6V10oF0zMtQKSK4/bsAg6OS+V6Z+9hy3v4bpicee62utMuaTMDl3RJ1Ig1blMKJ8GjIId0+32TZOXYZpNj9ra9+vZnkMZ9IR0kE/YbAkePS89kDnUwwKCWgDcr2gzrBKC0WymhUQiaRSIj37/7EgtbdDU0Ybhp9/HovRh4kgicSSBwjtrgEADgCexCB71nclspoROnEwKtB3T8pdRIFi+IvO62cI5E0YaTY1+l3++WVut12gQQqj+sbHnOG01JogqLYdF6aItHrfb4wnra69ZY0m7PRmzotmdtStMpqkpw1yRc68HwH1YVPpuJAS6AjgpEMZb4erfvXyxq6ahVlNjrkk9d/ndF/fuaTRo9A36HBpF6ZPmGMPEzCelt6XXH7YIdrtgeVipa12FV7Wyztzmm/rs6nPZ2qZaTR1jyJ6/+gm6dMHTz/P9ngvS2CfK7KTLJUyjbbBDC0BBnZ1kEMvTouM7scJQkpXh8bJ+GrDMor9F+71nLxENAVdDWLDFXIPjLX13JU7UaDwz2Jmy9I87SEbvzbXcsb+adpA1lOGgyU5G7hySPm+1eVespgmN2WWuNVcDgh5Zt9G2rC3/Rrfl/6zCyKn+sYeG2g8yuaa4rSXrZrua+W5ru39Jnz42MXEs7bHPmoyujM+XcdmMBzxupTbJin/3d5RB54w7dbHvhBkYPtU/cDw7fE98F5ZOI4oWIu6E3Z0Lu9LOiO8eOdb4sc6uozmTZ/edto60IxsVuh315LSVkePlAbANv1NRCUonKPEokiWVUDoyv1lF2MZbJ4c3nV57wILf+dVCU2BxXvoTYqJBa6P0qjorQrmEGfy2vHn0urjKH8FNkD89cPAZFIza6z20g+vSL8+jH69KEGSrqhb1tcp7eR/qRNvgUjVbhUHfAqNguQmKfaBaY4j6HMEqQ9wXT4lWA1W9ajAYTNXoetrua/a6QvsGpBfRRIBulF5GE7RZvmX+hMol3Iy2/1Pt7V7L59e61dMVoOmASzkrHVTPdbWH6inHyJfzSgxK7mLhZjaqdLo4nqUp461I8maVP1FDMMPezulw+nCrs8ui0U3Z/BYT72gI0FTgdfyzqJXtXBmaOtFls4w/gdz2biHQbqca/0jWAYJ4uYRtaFueiG9qahDzSnq38/OGoHqzPwh1BY4kmrkaa8hzZP9/39ezxGc9k820vS7WNbTPmVzSB5i5JnsjWVO7R19lHmrrm/I17qcbdhtrTEYD6W9rDuR9NzSdw6dlrVAqGmfjyaSgbD7fIOoPRw+0FB8y/tfVq+aguylstjhH9cnD3b9e0m5trb7kCVLVVfdVk7K/UQDchE8qWqnsIZ04KZACNfrLDV9XtGHx8XX0wKyulqrd2V6X7V8vl9Dz8Km8t8jcUzKmTFrkF7q7hVgmo89FIr29kUiuXFZtsUvLy4qKekAr34DhcLmEvsK/AAtwAOtcJxFXqcbfaJ2BoIlvOP9Y1+ALMS0OJkxPuO9sT80lHeFgk6bD19bm87W1lb0dQZ4zM45GatAbdeeT3qTfG2Wlr9sC/tZWf6BNxv1qeRh9jD+V8+xVhYxWW4ROH1pZOTQxMzY2c7nwxcbGl/u6C2+uH3+roM7a/5SH0QvquwKv8EjuOWXSfqg8mTi0snK5u/DW8fU3C937vtzY+ELe7coHsQH/AQiAAhLQAOo/Kf32eeLu7fMA8C8AAAD//wEAAP//kdarBgAAAQAAAAEEnCkcMypfDzz1AAMD6AAAAADcHHOkAAAAAN2XHqD/TP46AwwEJAABAAYAAgAAAAAAAAABAAAD2P7vAAACWP9M/0wDDAABAAAAAAAAAAAAAAAAAAAAK3icLI2xSgJgAAaPo6Wp6AUagqYgKCpIBFER0cH1Bic38R18K8HHE+EfvuHj+44z3gyMR2Nj/BorY28cjQ9jNraJsTROxr8xN96N7WC+jNfxfzIejBfj2ZgaC+PPWBvfw/05+s/gd8Z15GBcjPPdfwMAAP//AQAA//9KxRpAAAAAAAAAKgAqAEwAggCyANYA7AEAATQBSgFgAYIBngGuAdwB/gIwAlICfALAAtIC+AMUA1ADfgOcA9wEDAREBGgEiAS8BO4FJgVmBY4FpgW8BcgGAgYeBjgGSAABAAAAKwH4ACoAbgAGAAEAAAAAAAAAAAAAAAAAAwADeJyclk1vG9UXxn9jp7bHTfvPP5TSFCiXEkoaJRM7SqMqRQK3aVVDSEqcUqFSCcd2nFH8JnvcNqxZsGTFZwDEqqsuEGKVBQuWiBUrxIoPgFggNGeOPWPXJG1VqXnu3PP6POfea+Cd2N/EscZs4AAUW5zjQHGMFL8rjrPCn4rHmLEuKD5G2VpXnGDaeqQ4yY/WL4pTLMW+UmyzFPtJ8XEWY/8oPhE38YzikywlbimeYjrxeYAtSCe+VmwxntBcVoyJxA+K40wkflY8xtnEb4qPMZ74S3GCyeSY4iSTydOKU0wmZxTbTCZXFKeZTq4pPo5JthSPM5f8UvEJMsnvFZ/ESSpX1v9YTJ1VPMHlVC/O/7mQ6vU1ydupbxW/EKn5FOdTfyh+MdL76UjvL0VynYnkmuKknVJ8lnG71+PLEd9XOGWfV/wqaXtZ8bmI72uM2+8qNkzYvfpfD2fDOs+k/YniN0jbDcXTkThvRmp4iyX7oeKLzNrfKZ7FsXVmrDnm0j2N5iN5HTJpnRNrIVJDhpn0p4oXmU1/ofhapN9V4fAbDItkyJLBMK+rRVnlKNNkmwqGAvt08KhQp4MhT4MSTdq05P+i7JUxzLCLh0eLFRZY4IH8cyj2ozniWWeBi8xheICLxy6GTSp0qNDmvka7QZMGHoZ1itT9WswZCjTp0qZExUzhRNcYrtGkLOgWbZpcpUmNMlkc6fQyV8ixylU2uDLg2/MM/Ob7nofHN327j6T2Dq5UbQYy7tLEk84b3O/vOWTJsswV6hTZoyJWO1R4KBkWcbiEwzKXWJZYz16vK4oVMXiiVFlULNJmD0OTnefW2pUufe18v9s0RMlgr4CnlkH2BmUWxN9Ij7vClZHIXdG4jSvWznNVc4siXWoYVnEw3NSo/oRtCa/+365Mnl93hcYzTKrHPi0qbLGrfIaTWRAOPR4IpyHjNVxRoCEz7XPSFRaCvnusFcizhmFD4jcGIq8NRPA7GTVhWek3rGwwb6j/fYq41CiyTU12wpNXlLw5PhTssYIZYqdDSRRq4YlGHYnliAZVFtjgBmtDlRzNUVn+Btpv0+1PT9CdPzX+ec9REOULZkpOW05YKwgjd8izxU02uM2WrHNsskmOdbbIc118N9iUk7vBOqvikRcc7N2QE7DOxxjeJy82fuyK8hMo5p/JllTfkdqDWXap0xLO/cod6bUiHT67woYdjdrz7YhPCZcdsTSiX4MqXYpUdSpaUmFduOzNRnjqgomoSy++tuF+labctG05uX5Uw77eHf60BjUFN4T3FKo6zzUz/32jbcrp87sIUV66CGa802e/It0Orqv6lrhynwb3leGC8FGQ18TFWO9Rkuy+r8+FiT964svjJ74ciMpttnGDKY0fcI19yVbT6gzbwop4cDf2K/foiH4dUdev6DOJ4t9Nd8lwT++ZJlW52VrCeUnO4r6sgvm5y/whtkW9L9ui157Yz47IXZbXoibaGemtqtGnuSccezobwR1raNCVN7gtu8Epld7IHlrPcKSO9jCndQ2qOCevwrAmw9qOsnosX4eUGcsOqD3K70B+eVTl/fDZuCMnvyrTfJ2H+m6u9b+F6APh0hVeCvJG+fdY8AqHnr13+arEL7E3cubDGZ8fmfUon6e3HOz2KOvBHg+3HebgKPtRv1hG2ylz/wIAAP//AQAA///7vB6iAAADAAAAAAAA/7UAMgAAAAEAAAAAAAAAAAAAAAAAAAAAuAH/hbAEjQA=");
+			}
+			]]>
+		</style>
+		<style type="text/css">
+			<![CDATA[
+			.shape {
+				shape-rendering: geometricPrecision;
+				stroke-linejoin: round;
+			}
+
+			.connection {
+				stroke-linecap: round;
+				stroke-linejoin: round;
+			}
+
+			.blend {
+				mix-blend-mode: multiply;
+				opacity: 0.5;
+			}
+
+			.d2-3861335636 .fill-N1 {
+				fill: #000410;
+			}
+
+			.d2-3861335636 .fill-N2 {
+				fill: #0000B8;
+			}
+
+			.d2-3861335636 .fill-N3 {
+				fill: #9499AB;
+			}
+
+			.d2-3861335636 .fill-N4 {
+				fill: #CFD2DD;
+			}
+
+			.d2-3861335636 .fill-N5 {
+				fill: #C3DEF3;
+			}
+
+			.d2-3861335636 .fill-N6 {
+				fill: #EEF1F8;
+			}
+
+			.d2-3861335636 .fill-N7 {
+				fill: #FFFFFF;
+			}
+
+			.d2-3861335636 .fill-B1 {
+				fill: #000410;
+			}
+
+			.d2-3861335636 .fill-B2 {
+				fill: #0000E4;
+			}
+
+			.d2-3861335636 .fill-B3 {
+				fill: #5AA4DC;
+			}
+
+			.d2-3861335636 .fill-B4 {
+				fill: #E7E9EE;
+			}
+
+			.d2-3861335636 .fill-B5 {
+				fill: #F5F6F9;
+			}
+
+			.d2-3861335636 .fill-B6 {
+				fill: #FFFFFF;
+			}
+
+			.d2-3861335636 .fill-AA2 {
+				fill: #008566;
+			}
+
+			.d2-3861335636 .fill-AA4 {
+				fill: #45BBA5;
+			}
+
+			.d2-3861335636 .fill-AA5 {
+				fill: #7ACCBD;
+			}
+
+			.d2-3861335636 .fill-AB4 {
+				fill: #F1C759;
+			}
+
+			.d2-3861335636 .fill-AB5 {
+				fill: #F9E088;
+			}
+
+			.d2-3861335636 .stroke-N1 {
+				stroke: #000410;
+			}
+
+			.d2-3861335636 .stroke-N2 {
+				stroke: #0000B8;
+			}
+
+			.d2-3861335636 .stroke-N3 {
+				stroke: #9499AB;
+			}
+
+			.d2-3861335636 .stroke-N4 {
+				stroke: #CFD2DD;
+			}
+
+			.d2-3861335636 .stroke-N5 {
+				stroke: #C3DEF3;
+			}
+
+			.d2-3861335636 .stroke-N6 {
+				stroke: #EEF1F8;
+			}
+
+			.d2-3861335636 .stroke-N7 {
+				stroke: #FFFFFF;
+			}
+
+			.d2-3861335636 .stroke-B1 {
+				stroke: #000410;
+			}
+
+			.d2-3861335636 .stroke-B2 {
+				stroke: #0000E4;
+			}
+
+			.d2-3861335636 .stroke-B3 {
+				stroke: #5AA4DC;
+			}
+
+			.d2-3861335636 .stroke-B4 {
+				stroke: #E7E9EE;
+			}
+
+			.d2-3861335636 .stroke-B5 {
+				stroke: #F5F6F9;
+			}
+
+			.d2-3861335636 .stroke-B6 {
+				stroke: #FFFFFF;
+			}
+
+			.d2-3861335636 .stroke-AA2 {
+				stroke: #008566;
+			}
+
+			.d2-3861335636 .stroke-AA4 {
+				stroke: #45BBA5;
+			}
+
+			.d2-3861335636 .stroke-AA5 {
+				stroke: #7ACCBD;
+			}
+
+			.d2-3861335636 .stroke-AB4 {
+				stroke: #F1C759;
+			}
+
+			.d2-3861335636 .stroke-AB5 {
+				stroke: #F9E088;
+			}
+
+			.d2-3861335636 .background-color-N1 {
+				background-color: #000410;
+			}
+
+			.d2-3861335636 .background-color-N2 {
+				background-color: #0000B8;
+			}
+
+			.d2-3861335636 .background-color-N3 {
+				background-color: #9499AB;
+			}
+
+			.d2-3861335636 .background-color-N4 {
+				background-color: #CFD2DD;
+			}
+
+			.d2-3861335636 .background-color-N5 {
+				background-color: #C3DEF3;
+			}
+
+			.d2-3861335636 .background-color-N6 {
+				background-color: #EEF1F8;
+			}
+
+			.d2-3861335636 .background-color-N7 {
+				background-color: #FFFFFF;
+			}
+
+			.d2-3861335636 .background-color-B1 {
+				background-color: #000410;
+			}
+
+			.d2-3861335636 .background-color-B2 {
+				background-color: #0000E4;
+			}
+
+			.d2-3861335636 .background-color-B3 {
+				background-color: #5AA4DC;
+			}
+
+			.d2-3861335636 .background-color-B4 {
+				background-color: #E7E9EE;
+			}
+
+			.d2-3861335636 .background-color-B5 {
+				background-color: #F5F6F9;
+			}
+
+			.d2-3861335636 .background-color-B6 {
+				background-color: #FFFFFF;
+			}
+
+			.d2-3861335636 .background-color-AA2 {
+				background-color: #008566;
+			}
+
+			.d2-3861335636 .background-color-AA4 {
+				background-color: #45BBA5;
+			}
+
+			.d2-3861335636 .background-color-AA5 {
+				background-color: #7ACCBD;
+			}
+
+			.d2-3861335636 .background-color-AB4 {
+				background-color: #F1C759;
+			}
+
+			.d2-3861335636 .background-color-AB5 {
+				background-color: #F9E088;
+			}
+
+			.d2-3861335636 .color-N1 {
+				color: #000410;
+			}
+
+			.d2-3861335636 .color-N2 {
+				color: #0000B8;
+			}
+
+			.d2-3861335636 .color-N3 {
+				color: #9499AB;
+			}
+
+			.d2-3861335636 .color-N4 {
+				color: #CFD2DD;
+			}
+
+			.d2-3861335636 .color-N5 {
+				color: #C3DEF3;
+			}
+
+			.d2-3861335636 .color-N6 {
+				color: #EEF1F8;
+			}
+
+			.d2-3861335636 .color-N7 {
+				color: #FFFFFF;
+			}
+
+			.d2-3861335636 .color-B1 {
+				color: #000410;
+			}
+
+			.d2-3861335636 .color-B2 {
+				color: #0000E4;
+			}
+
+			.d2-3861335636 .color-B3 {
+				color: #5AA4DC;
+			}
+
+			.d2-3861335636 .color-B4 {
+				color: #E7E9EE;
+			}
+
+			.d2-3861335636 .color-B5 {
+				color: #F5F6F9;
+			}
+
+			.d2-3861335636 .color-B6 {
+				color: #FFFFFF;
+			}
+
+			.d2-3861335636 .color-AA2 {
+				color: #008566;
+			}
+
+			.d2-3861335636 .color-AA4 {
+				color: #45BBA5;
+			}
+
+			.d2-3861335636 .color-AA5 {
+				color: #7ACCBD;
+			}
+
+			.d2-3861335636 .color-AB4 {
+				color: #F1C759;
+			}
+
+			.d2-3861335636 .color-AB5 {
+				color: #F9E088;
+			}
+
+			.appendix text.text {
+				fill: #000410
+			}
+
+			.md {
+				--color-fg-default: #000410;
+				--color-fg-muted: #0000B8;
+				--color-fg-subtle: #9499AB;
+				--color-canvas-default: #FFFFFF;
+				--color-canvas-subtle: #EEF1F8;
+				--color-border-default: #000410;
+				--color-border-muted: #0000E4;
+				--color-neutral-muted: #EEF1F8;
+				--color-accent-fg: #0000E4;
+				--color-accent-emphasis: #0000E4;
+				--color-attention-subtle: #0000B8;
+				--color-danger-fg: red;
+			}
+
+			.sketch-overlay-B1 {
+				fill: url(#streaks-darker);
+				mix-blend-mode: lighten
+			}
+
+			.sketch-overlay-B2 {
+				fill: url(#streaks-darker);
+				mix-blend-mode: lighten
+			}
+
+			.sketch-overlay-B3 {
+				fill: url(#streaks-normal);
+				mix-blend-mode: color-burn
+			}
+
+			.sketch-overlay-B4 {
+				fill: url(#streaks-bright);
+				mix-blend-mode: darken
+			}
+
+			.sketch-overlay-B5 {
+				fill: url(#streaks-bright);
+				mix-blend-mode: darken
+			}
+
+			.sketch-overlay-B6 {
+				fill: url(#streaks-bright);
+				mix-blend-mode: darken
+			}
+
+			.sketch-overlay-AA2 {
+				fill: url(#streaks-dark);
+				mix-blend-mode: overlay
+			}
+
+			.sketch-overlay-AA4 {
+				fill: url(#streaks-normal);
+				mix-blend-mode: color-burn
+			}
+
+			.sketch-overlay-AA5 {
+				fill: url(#streaks-normal);
+				mix-blend-mode: color-burn
+			}
+
+			.sketch-overlay-AB4 {
+				fill: url(#streaks-normal);
+				mix-blend-mode: color-burn
+			}
+
+			.sketch-overlay-AB5 {
+				fill: url(#streaks-normal);
+				mix-blend-mode: color-burn
+			}
+
+			.sketch-overlay-N1 {
+				fill: url(#streaks-darker);
+				mix-blend-mode: lighten
+			}
+
+			.sketch-overlay-N2 {
+				fill: url(#streaks-darker);
+				mix-blend-mode: lighten
+			}
+
+			.sketch-overlay-N3 {
+				fill: url(#streaks-normal);
+				mix-blend-mode: color-burn
+			}
+
+			.sketch-overlay-N4 {
+				fill: url(#streaks-normal);
+				mix-blend-mode: color-burn
+			}
+
+			.sketch-overlay-N5 {
+				fill: url(#streaks-normal);
+				mix-blend-mode: color-burn
+			}
+
+			.sketch-overlay-N6 {
+				fill: url(#streaks-bright);
+				mix-blend-mode: darken
+			}
+
+			.sketch-overlay-N7 {
+				fill: url(#streaks-bright);
+				mix-blend-mode: darken
+			}
+
+			.light-code {
+				display: block
+			}
+
+			.dark-code {
+				display: none
+			}
+			]]>
+		</style>
+		<style type="text/css">
+			<![CDATA[
+			.dots-overlay {
+				fill: url(#dots);
+				mix-blend-mode: multiply;
+			}
+			]]>
+		</style>
+		<defs>
+			<pattern id="dots" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
+				<g style="mix-blend-mode:multiply" opacity="0.1">
+					<rect x="2" y="2" width="1" height="1" fill="#0A0F25" />
+				</g>
+				<g style="mix-blend-mode:multiply" opacity="0.1">
+					<rect x="12" y="2" width="1" height="1" fill="#0A0F25" />
+				</g>
+				<g style="mix-blend-mode:multiply" opacity="0.1">
+					<rect x="12" y="12" width="1" height="1" fill="#0A0F25" />
+				</g>
+				<g style="mix-blend-mode:multiply" opacity="0.1">
+					<rect x="2" y="12" width="1" height="1" fill="#0A0F25" />
+				</g>
+				<g style="mix-blend-mode:multiply" opacity="0.1">
+					<rect x="2" y="7" width="1" height="1" fill="#0A0F25" />
+				</g>
+				<g style="mix-blend-mode:multiply" opacity="0.1">
+					<rect x="12" y="7" width="1" height="1" fill="#0A0F25" />
+				</g>
+				<g style="mix-blend-mode:multiply" opacity="0.1">
+					<rect x="7" y="2" width="1" height="1" fill="#0A0F25" />
+				</g>
+				<g style="mix-blend-mode:multiply" opacity="0.1">
+					<rect x="7" y="12" width="1" height="1" fill="#0A0F25" />
+				</g>
+				<g style="mix-blend-mode:multiply" opacity="0.1">
+					<rect x="7" y="7" width="1" height="1" fill="#0A0F25" />
+				</g>
+			</pattern>
+		</defs>
+		<g id="frontend">
+			<g class="shape">
+				<rect x="0.000000" y="198.000000" width="1416.000000" height="1634.000000" fill="#fff"
+					class=" stroke-B2" style="stroke-width:2;stroke-dasharray:6.000000,5.919384;" />
+				<rect x="0.000000" y="198.000000" width="1416.000000" height="1634.000000" class="dots-overlay"
+					style="stroke-width:2;stroke-dasharray:6.000000,5.919384;" />
+				<rect x="5.000000" y="203.000000" width="1406.000000" height="1624.000000" fill="transparent"
+					class=" stroke-B2" style="stroke-width:2;stroke-dasharray:6.000000,5.919384;" />
+			</g><text x="708.000000" y="231.000000" class="text-mono fill-N1"
+				style="text-anchor:middle;font-size:28px">FRONTEND</text>
+		</g>
+		<g id="start">
+			<g class="shape">
+				<rect x="432.000000" y="0.000000" width="170.000000" height="66.000000" class=" stroke-B1 fill-B6"
+					style="stroke-width:2;" />
+			</g><text x="517.000000" y="38.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">START ROADMAP</text>
+		</g>
+		<g id="end">
+			<g class="shape">
+				<rect x="818.000000" y="1953.000000" width="149.000000" height="66.000000" class=" stroke-B1 fill-B6"
+					style="stroke-width:2;" />
+			</g><text x="892.500000" y="1991.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">END ROADMAP</text>
+		</g>
+		<g id="frontend.internet">
+			<g class="shape">
+				<rect x="456.000000" y="446.000000" width="122.000000" height="120.000000" class=" stroke-B1 fill-B5"
+					style="stroke-width:2;" />
+			</g><text x="517.000000" y="511.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">INTERNET</text>
+		</g><a href="https://apple.com" xlink:href="https://apple.com">
+			<g id="frontend.internet_1">
+				<g class="shape">
+					<rect x="60.000000" y="258.000000" width="334.000000" height="66.000000" fill="orange"
+						class=" stroke-B1" style="stroke-width:2;" />
+				</g><text x="227.000000" y="296.500000" class="text-mono-bold fill-N1"
+					style="text-anchor:middle;font-size:16px">HOW DOES THE INTERNET WORK?</text>
+			</g>
+		</a>
+		<g id="frontend.internet_2">
+			<g class="shape">
+				<rect x="60.000000" y="344.000000" width="334.000000" height="66.000000" fill="orange"
+					class=" stroke-B1" style="stroke-width:2;" />
+			</g><text x="227.000000" y="382.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">WHAT IS HTTP?</text>
+		</g>
+		<g id="frontend.internet_3">
+			<g class="shape">
+				<rect x="60.000000" y="430.000000" width="334.000000" height="66.000000" fill="orange"
+					class=" stroke-B1" style="stroke-width:2;" />
+			</g><text x="227.000000" y="468.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">WHAT IS DOMAIN NAME?</text>
+		</g>
+		<g id="frontend.internet_4">
+			<g class="shape">
+				<rect x="60.000000" y="516.000000" width="334.000000" height="66.000000" fill="orange"
+					class=" stroke-B1" style="stroke-width:2;" />
+			</g><text x="227.000000" y="554.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">WHAT IS HOSTING?</text>
+		</g>
+		<g id="frontend.internet_5">
+			<g class="shape">
+				<rect x="60.000000" y="602.000000" width="334.000000" height="66.000000" fill="orange"
+					class=" stroke-B1" style="stroke-width:2;" />
+			</g><text x="227.000000" y="640.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">DNS AND HOW IT WORKS?</text>
+		</g>
+		<g id="frontend.internet_6">
+			<g class="shape">
+				<rect x="60.000000" y="688.000000" width="334.000000" height="66.000000" fill="orange"
+					class=" stroke-B1" style="stroke-width:2;" />
+			</g><text x="227.000000" y="726.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">BROWSER AND HOW THEY WORK?</text>
+		</g>
+		<g id="frontend.html">
+			<g class="shape">
+				<rect x="456.000000" y="716.000000" width="123.000000" height="123.000000" class=" stroke-B1 fill-B5"
+					style="stroke-width:2;" />
+			</g><text x="517.500000" y="785.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:24px">HTML</text>
+		</g>
+		<g id="frontend.html_1">
+			<g class="shape">
+				<rect x="654.000000" y="616.000000" width="246.000000" height="66.000000" fill="orange"
+					class=" stroke-B1" style="stroke-width:2;" />
+			</g><text x="777.000000" y="654.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">LEARN THE BASICS</text>
+		</g>
+		<g id="frontend.html_2">
+			<g class="shape">
+				<rect x="654.000000" y="702.000000" width="246.000000" height="66.000000" fill="orange"
+					class=" stroke-B1" style="stroke-width:2;" />
+			</g><text x="777.000000" y="740.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">WRITING SEMANTIC HTML</text>
+		</g>
+		<g id="frontend.html_3">
+			<g class="shape">
+				<rect x="654.000000" y="788.000000" width="246.000000" height="66.000000" fill="orange"
+					class=" stroke-B1" style="stroke-width:2;" />
+			</g><text x="777.000000" y="826.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">ACCESSIBILITY</text>
+		</g>
+		<g id="frontend.html_4">
+			<g class="shape">
+				<rect x="654.000000" y="874.000000" width="246.000000" height="66.000000" fill="orange"
+					class=" stroke-B1" style="stroke-width:2;" />
+			</g><text x="777.000000" y="912.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">SEO BASICS</text>
+		</g>
+		<g id="frontend.css">
+			<g class="shape">
+				<rect x="951.000000" y="716.000000" width="120.000000" height="120.000000" class=" stroke-B1 fill-B5"
+					style="stroke-width:2;" />
+			</g><text x="1011.000000" y="784.000000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:24px">CSS</text>
+		</g>
+		<g id="frontend.css_1">
+			<g class="shape">
+				<rect x="1149.000000" y="657.000000" width="207.000000" height="66.000000" fill="orange"
+					class=" stroke-B1" style="stroke-width:2;" />
+			</g><text x="1252.500000" y="695.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">LEARN THE BASICS</text>
+		</g>
+		<g id="frontend.css_2">
+			<g class="shape">
+				<rect x="1149.000000" y="743.000000" width="207.000000" height="66.000000" fill="orange"
+					class=" stroke-B1" style="stroke-width:2;" />
+			</g><text x="1252.500000" y="781.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">MAKING LAYOUTS</text>
+		</g>
+		<g id="frontend.css_3">
+			<g class="shape">
+				<rect x="1149.000000" y="829.000000" width="207.000000" height="66.000000" fill="orange"
+					class=" stroke-B1" style="stroke-width:2;" />
+			</g><text x="1252.500000" y="867.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">RESPONSIVE DESIGN</text>
+		</g>
+		<g id="frontend.js">
+			<g class="shape">
+				<rect x="940.000000" y="1112.000000" width="142.000000" height="120.000000" class=" stroke-B1 fill-B5"
+					style="stroke-width:2;" />
+			</g><text x="1011.000000" y="1177.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">JAVASCRIPT</text>
+		</g>
+		<g id="frontend.js_1">
+			<g class="shape">
+				<rect x="544.000000" y="1053.000000" width="255.000000" height="66.000000" fill="orange"
+					class=" stroke-B1" style="stroke-width:2;" />
+			</g><text x="671.500000" y="1091.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">LEARN THE BASICS</text>
+		</g>
+		<g id="frontend.js_2">
+			<g class="shape">
+				<rect x="544.000000" y="1139.000000" width="255.000000" height="66.000000" fill="orange"
+					class=" stroke-B1" style="stroke-width:2;" />
+			</g><text x="671.500000" y="1177.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">LEARN DOM MANIPULATION</text>
+		</g>
+		<g id="frontend.js_3">
+			<g class="shape">
+				<rect x="544.000000" y="1225.000000" width="255.000000" height="66.000000" fill="orange"
+					class=" stroke-B1" style="stroke-width:2;" />
+			</g><text x="671.500000" y="1263.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">FETCH API/ AJAX (XHR)</text>
+		</g>
+		<g id="frontend.vcshosting">
+			<g class="shape">
+				<rect x="936.000000" y="1310.000000" width="150.000000" height="66.000000" class=" stroke-B1 fill-B5"
+					style="stroke-width:2;" />
+			</g><text x="1011.000000" y="1348.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">VCS HOSTING</text>
+		</g>
+		<g id="frontend.vcs">
+			<g class="shape">
+				<rect x="878.000000" y="1508.000000" width="266.000000" height="66.000000" class=" stroke-B1 fill-B5"
+					style="stroke-width:2;" />
+			</g><text x="1011.000000" y="1546.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">VERSION CONTROL SYSTEMS</text>
+		</g>
+		<g id="frontend.vcs_1">
+			<g class="shape">
+				<rect x="973.000000" y="1706.000000" width="75.000000" height="66.000000" fill="orange"
+					class=" stroke-B1" style="stroke-width:2;" />
+			</g><text x="1010.500000" y="1744.500000" class="text-mono-bold fill-N1"
+				style="text-anchor:middle;font-size:16px">GIT</text>
+		</g>
+		<g id="frontend.(internet -- internet_1)[0]">
+			<path
+				d="M 454.000000 506.000000 L 425.000000 506.000000 S 425.000000 506.000000 425.000000 506.000000 L 425.000000 291.000000 S 425.000000 291.000000 425.000000 291.000000 L 396.000000 291.000000"
+				fill="none" class="connection stroke-B2" style="stroke-width:2;stroke-dasharray:6.000000,5.919384;"
+				mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(internet -- internet_2)[0]">
+			<path
+				d="M 454.000000 506.000000 L 425.000000 506.000000 S 425.000000 506.000000 425.000000 506.000000 L 425.000000 377.000000 S 425.000000 377.000000 425.000000 377.000000 L 396.000000 377.000000"
+				fill="none" class="connection stroke-B2" style="stroke-width:2;stroke-dasharray:6.000000,5.919384;"
+				mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(internet -- internet_3)[0]">
+			<path
+				d="M 454.000000 506.000000 L 425.000000 506.000000 S 425.000000 506.000000 425.000000 506.000000 L 425.000000 471.000000 S 425.000000 471.000000 425.000000 471.000000 L 396.000000 471.000000"
+				fill="none" class="connection stroke-B2" style="stroke-width:2;stroke-dasharray:6.000000,5.919384;"
+				mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(internet -- internet_4)[0]">
+			<path
+				d="M 454.000000 506.000000 L 425.000000 506.000000 S 425.000000 506.000000 425.000000 506.000000 L 425.000000 541.000000 S 425.000000 541.000000 425.000000 541.000000 L 396.000000 541.000000"
+				fill="none" class="connection stroke-B2" style="stroke-width:2;stroke-dasharray:6.000000,5.919384;"
+				mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(internet -- internet_5)[0]">
+			<path
+				d="M 454.000000 506.000000 L 425.000000 506.000000 S 425.000000 506.000000 425.000000 506.000000 L 425.000000 635.000000 S 425.000000 635.000000 425.000000 635.000000 L 396.000000 635.000000"
+				fill="none" class="connection stroke-B2" style="stroke-width:2;stroke-dasharray:6.000000,5.919384;"
+				mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(internet -- internet_6)[0]">
+			<path
+				d="M 454.000000 506.000000 L 425.000000 506.000000 S 425.000000 506.000000 425.000000 506.000000 L 425.000000 735.000000 S 425.000000 735.000000 425.000000 735.000000 L 396.000000 735.000000"
+				fill="none" class="connection stroke-B2" style="stroke-width:2;stroke-dasharray:6.000000,5.919384;"
+				mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(html -- html_1)[0]">
+			<path
+				d="M 581.000000 778.000000 L 616.000000 778.000000 S 616.000000 778.000000 616.000000 778.000000 L 616.000000 649.000000 S 616.000000 649.000000 616.000000 649.000000 L 652.000000 649.000000"
+				fill="none" class="connection stroke-B2" style="stroke-width:2;stroke-dasharray:6.000000,5.919384;"
+				mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(html -- html_2)[0]">
+			<path
+				d="M 581.000000 778.000000 L 616.000000 778.000000 S 616.000000 778.000000 616.000000 778.000000 L 616.000000 742.000000 S 616.000000 742.000000 616.000000 742.000000 L 652.000000 742.000000"
+				fill="none" class="connection stroke-B2" style="stroke-width:2;stroke-dasharray:6.000000,5.919384;"
+				mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(html -- html_3)[0]">
+			<path
+				d="M 581.000000 778.000000 L 616.000000 778.000000 S 616.000000 778.000000 616.000000 778.000000 L 616.000000 813.000000 S 616.000000 813.000000 616.000000 813.000000 L 652.000000 813.000000"
+				fill="none" class="connection stroke-B2" style="stroke-width:2;stroke-dasharray:6.000000,5.919384;"
+				mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(html -- html_4)[0]">
+			<path
+				d="M 581.000000 778.000000 L 616.000000 778.000000 S 616.000000 778.000000 616.000000 778.000000 L 616.000000 907.000000 S 616.000000 907.000000 616.000000 907.000000 L 652.000000 907.000000"
+				fill="none" class="connection stroke-B2" style="stroke-width:2;stroke-dasharray:6.000000,5.919384;"
+				mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(css -- css_1)[0]">
+			<path
+				d="M 1073.000000 776.000000 L 1110.000000 776.000000 S 1110.000000 776.000000 1110.000000 776.000000 L 1110.000000 686.000000 S 1110.000000 686.000000 1110.000000 686.000000 L 1147.000000 686.000000"
+				fill="none" class="connection stroke-B2" style="stroke-width:2;stroke-dasharray:6.000000,5.919384;"
+				mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(css -- css_2)[0]">
+			<path d="M 1073.000000 776.000000 L 1147.000000 776.000000" fill="none" class="connection stroke-B2"
+				style="stroke-width:2;stroke-dasharray:6.000000,5.919384;" mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(css -- css_3)[0]">
+			<path
+				d="M 1073.000000 776.000000 L 1110.000000 776.000000 S 1110.000000 776.000000 1110.000000 776.000000 L 1110.000000 865.000000 S 1110.000000 865.000000 1110.000000 865.000000 L 1147.000000 865.000000"
+				fill="none" class="connection stroke-B2" style="stroke-width:2;stroke-dasharray:6.000000,5.919384;"
+				mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(js -- js_1)[0]">
+			<path
+				d="M 938.000000 1172.000000 L 869.000000 1172.000000 S 869.000000 1172.000000 869.000000 1172.000000 L 869.000000 1086.000000 S 869.000000 1086.000000 869.000000 1086.000000 L 801.000000 1086.000000"
+				fill="none" class="connection stroke-B2" style="stroke-width:2;stroke-dasharray:6.000000,5.919384;"
+				mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(js -- js_2)[0]">
+			<path d="M 938.000000 1172.000000 L 801.000000 1172.000000" fill="none" class="connection stroke-B2"
+				style="stroke-width:2;stroke-dasharray:6.000000,5.919384;" mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(js -- js_3)[0]">
+			<path
+				d="M 938.000000 1172.000000 L 869.000000 1172.000000 S 869.000000 1172.000000 869.000000 1172.000000 L 869.000000 1258.000000 S 869.000000 1258.000000 869.000000 1258.000000 L 801.000000 1258.000000"
+				fill="none" class="connection stroke-B2" style="stroke-width:2;stroke-dasharray:6.000000,5.919384;"
+				mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(vcs -- vcs_1)[0]">
+			<path d="M 1010.000000 1576.000000 L 1010.000000 1704.000000" fill="none" class="connection stroke-B2"
+				style="stroke-width:2;stroke-dasharray:6.000000,5.919384;" mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(internet -&gt; html)[0]">
+			<marker id="mk-3488378134" markerWidth="10.000000" markerHeight="12.000000" refX="7.000000" refY="6.000000"
+				viewBox="0.000000 0.000000 10.000000 12.000000" orient="auto" markerUnits="userSpaceOnUse">
+				<polygon points="0.000000,0.000000 10.000000,6.000000 0.000000,12.000000" class="connection fill-B1"
+					stroke-width="2" />
+			</marker>
+			<path d="M 517.000000 568.000000 L 517.000000 712.000000" fill="none" class="connection stroke-B1"
+				style="stroke-width:2;" marker-end="url(#mk-3488378134)" mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(html -&gt; css)[0]">
+			<path
+				d="M 548.000000 714.000000 L 548.000000 591.000000 S 548.000000 591.000000 548.000000 591.000000 L 1011.000000 591.000000 S 1011.000000 591.000000 1011.000000 591.000000 L 1011.000000 712.000000"
+				fill="none" class="connection stroke-B1" style="stroke-width:2;" marker-end="url(#mk-3488378134)"
+				mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(css -&gt; js)[0]">
+			<path d="M 1011.000000 838.000000 L 1011.000000 1108.000000" fill="none" class="connection stroke-B1"
+				style="stroke-width:2;" marker-end="url(#mk-3488378134)" mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(js -&gt; vcshosting)[0]">
+			<path d="M 1011.000000 1234.000000 L 1011.000000 1306.000000" fill="none" class="connection stroke-B1"
+				style="stroke-width:2;" marker-end="url(#mk-3488378134)" mask="url(#d2-3861335636)" />
+		</g>
+		<g id="frontend.(vcshosting -&gt; vcs)[0]">
+			<path d="M 1011.000000 1378.000000 L 1011.000000 1504.000000" fill="none" class="connection stroke-B1"
+				style="stroke-width:2;" marker-end="url(#mk-3488378134)" mask="url(#d2-3861335636)" />
+		</g>
+		<g id="(start -&gt; frontend.internet)[0]">
+			<path d="M 517.000000 68.000000 L 517.000000 442.000000" fill="none" class="connection stroke-B1"
+				style="stroke-width:2;" marker-end="url(#mk-3488378134)" mask="url(#d2-3861335636)" />
+		</g>
+		<g id="(frontend.vcs -&gt; end)[0]">
+			<path d="M 922.000000 1576.000000 L 922.000000 1949.000000" fill="none" class="connection stroke-B1"
+				style="stroke-width:2;" marker-end="url(#mk-3488378134)" mask="url(#d2-3861335636)" />
+		</g>
+		<g transform="translate(378 242)" class="appendix-icon"><svg width="32" height="32" viewBox="0 0 32 32"
+				fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g clip-path="url(#clip0_3440_35088111)">
+					<path
+						d="M16 31.1109C24.3456 31.1109 31.1111 24.3454 31.1111 15.9998C31.1111 7.65415 24.3456 0.888672 16 0.888672C7.65436 0.888672 0.888885 7.65415 0.888885 15.9998C0.888885 24.3454 7.65436 31.1109 16 31.1109Z"
+						fill="white" stroke="#DEE1EB" />
+					<path
+						d="M14.3909 16.7965C14.7364 17.2584 15.1772 17.6406 15.6834 17.9171C16.1896 18.1938 16.7494 18.3582 17.3248 18.3993C17.9001 18.4405 18.4777 18.3575 19.0181 18.1559C19.5586 17.9543 20.0492 17.6389 20.4571 17.2309L22.8708 14.8173C23.6036 14.0586 24.0089 13.0425 23.9998 11.9877C23.9906 10.933 23.5676 9.92404 22.8217 9.17821C22.0759 8.43237 21.067 8.00931 20.0123 8.00015C18.9575 7.99098 17.9413 8.39644 17.1827 9.1292L15.7988 10.505"
+						stroke="#2E3346" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					<path
+						d="M17.609 15.1874C17.2635 14.7255 16.8227 14.3433 16.3165 14.0667C15.8103 13.7902 15.2505 13.6257 14.6752 13.5845C14.0998 13.5433 13.5223 13.6263 12.9819 13.8279C12.4414 14.0295 11.9506 14.345 11.5428 14.753L9.1292 17.1666C8.39644 17.9252 7.99098 18.9414 8.00015 19.9962C8.00931 21.0509 8.43237 22.0598 9.17821 22.8056C9.92405 23.5515 10.933 23.9745 11.9877 23.9837C13.0425 23.9928 14.0586 23.5875 14.8173 22.8547L16.193 21.4788"
+						stroke="#2E3346" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				</g>
+				<defs>
+					<clipPath id="clip0_3440_35088111">
+						<rect width="32" height="32" fill="white" />
+					</clipPath>
+				</defs>
+			</svg>
+		</g>
+		<mask id="d2-3861335636" maskUnits="userSpaceOnUse" x="-101" y="-101" width="1618" height="2221">
+			<rect x="-101" y="-101" width="1618" height="2221" fill="white"></rect>
+			<rect x="642.500000" y="203.000000" width="131" height="36" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="454.500000" y="22.500000" width="125" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="840.500000" y="1975.500000" width="104" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="478.500000" y="495.500000" width="77" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="98.500000" y="280.500000" width="257" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="165.000000" y="366.500000" width="124" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="131.500000" y="452.500000" width="191" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="151.000000" y="538.500000" width="152" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="127.500000" y="624.500000" width="199" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="103.500000" y="710.500000" width="247" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="489.500000" y="761.500000" width="56" height="32" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="701.000000" y="638.500000" width="152" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="676.500000" y="724.500000" width="201" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="714.000000" y="810.500000" width="126" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="729.000000" y="896.500000" width="96" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="989.000000" y="760.000000" width="44" height="32" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="1176.500000" y="679.500000" width="152" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="1185.500000" y="765.500000" width="134" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="1171.500000" y="851.500000" width="162" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="962.500000" y="1161.500000" width="97" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="595.500000" y="1075.500000" width="152" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="566.500000" y="1161.500000" width="210" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="572.500000" y="1247.500000" width="198" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="958.500000" y="1332.500000" width="105" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="900.500000" y="1530.500000" width="221" height="21" fill="rgba(0,0,0,0.75)"></rect>
+			<rect x="995.500000" y="1728.500000" width="30" height="21" fill="rgba(0,0,0,0.75)"></rect>
+		</mask>
+	</svg></svg>
