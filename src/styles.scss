@@ -1,4 +1,13 @@
 body {
   padding: 0;
   margin: 0;
+  overflow: hidden;
+}
+
+button {
+  --tui-primary: #426ef0;
+}
+
+input {
+  --tui-primary: #426ef0;
 }

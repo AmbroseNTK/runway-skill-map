@@ -1,0 +1,132 @@
+<div
+  id="myNav"
+  (click)="drawer.close()"
+  class="overlay-black"
+  [style]="{ width: (drawer.openStateChange | async) ? '100%' : '0%' }"
+></div>
+<div
+  id="myNav"
+  class="overlay"
+  [style]="{ width: (drawer.openStateChange | async) ? '50%' : '0%' }"
+>
+  <div *ngIf="isLoading$ | async" class="overlay-content">
+    <div class="spinner">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
+  </div>
+  <div *ngIf="!(isLoading$ | async)" class="overlay-content">
+    <tui-tabs [(activeItemIndex)]="selectedIndex">
+      <button tuiTab tabindex="0">
+        <tui-svg src="tuiIconBoxLarge" class="tui-space_right-2"></tui-svg>
+        Skill Information
+      </button>
+      <button tuiTab tabIndex="1">
+        <tui-svg src="tuiIconUserLarge" class="tui-space_right-2"></tui-svg>
+        Profile
+      </button>
+      <button tuiTab tabIndex="2">
+        <tui-svg src="tuiIconToolLarge" class="tui-space_right-2"></tui-svg>
+        Setting
+      </button>
+    </tui-tabs>
+    <div *ngIf="selectedIndex == 0">
+      <div *ngIf="!(selectedSkill$ | async)">
+        <p>Data is not available right now</p>
+      </div>
+      <div *ngIf="selectedSkill$ | async as skill" style="padding: 10px">
+        <tui-island>
+          <p class="tui-island__category">{{ skill.parentId }}</p>
+          <h3 class="tui-island__title">{{ skill.name }}</h3>
+          <p class="tui-island__paragraph">
+            {{ skill.description }}
+          </p>
+          <p style="font-family: 1rem; font-weight: bold">
+            Recommendation resources
+          </p>
+          <p *ngFor="let link of skill.links">
+            <a [href]="link">{{ link }}</a>
+          </p>
+        </tui-island>
+        <br />
+        <span *ngIf="user$ | async as user">
+          <button
+            *ngIf="(skillExisted$ | async) == false"
+            tuiButton
+            type="button"
+            appearance="primary"
+            class="tui-space_right-3 tui-space_bottom-3"
+            (click)="checkSkill(user.id, skill)"
+          >
+            Check as completed
+          </button>
+          <button
+            *ngIf="(skillExisted$ | async) == true"
+            tuiButton
+            type="button"
+            appearance="outline"
+            class="tui-space_right-3 tui-space_bottom-3"
+            (click)="uncheckSkill(user.id, skill.id)"
+          >
+            Uncheck as completed
+          </button>
+        </span>
+      </div>
+    </div>
+    <div *ngIf="selectedIndex == 1">
+      <span *ngIf="drawer.showProfile | async">
+        <tui-island style="margin-top: 10px">
+          <p class="tui-island__category">World map discovery progress</p>
+          <h3 class="tui-island__title">
+            See how you discover the Tech World!
+          </h3>
+          <p class="tui-island__paragraph">{{ worldmapProgress$ | async }} %</p>
+          <progress
+            tuiProgressBar
+            max="100"
+            color="linear-gradient(to right, var(--tui-support-02), var(--tui-support-14), var(--tui-support-12))"
+            class="progress"
+            [value]="worldmapProgress$ | async"
+          ></progress>
+        </tui-island>
+        <h2>Achieved skills</h2>
+        <div style="width: 100%; height: 100%; overflow-y: auto">
+          <tui-island *ngFor="let skill of loadedSkillList" style="margin: 5px">
+            <p class="tui-island__category">{{ skill.parentId }}</p>
+            <h3 class="tui-island__title">{{ skill.name }}</h3>
+            <p class="tui-island__paragraph">
+              {{ getDateString(skill.addedDate) }}
+            </p>
+          </tui-island>
+        </div>
+      </span>
+      <span *ngIf="!(user$ | async)">
+        <h3>Please login to get your profile</h3>
+      </span>
+    </div>
+    <div *ngIf="selectedIndex == 2">
+      <tui-island style="margin-top: 10px">
+        <p class="tui-island__category">About us</p>
+        <h3 class="tui-island__title">Runway Skill Map</h3>
+        <p class="tui-island__paragraph">
+          Runway Skill Map is a product of Runway Club
+        </p>
+        <h4>Contributors</h4>
+        <p>Kiet Nguyen Tuan</p>
+        <p>...</p>
+      </tui-island>
+
+      <h2>Setting</h2>
+      <button
+        *ngIf="user$ | async"
+        tuiButton
+        type="button"
+        appearance="primary"
+        class="tui-space_right-3 tui-space_bottom-3"
+        (click)="logout()"
+      >
+        Log out
+      </button>
+    </div>
+  </div>
+</div>
