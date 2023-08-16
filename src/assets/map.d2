@@ -5,32 +5,37 @@ frontend: Frontend {
   }
   internet: Internet
   internet_1: How does the internet work? {
-    link: https://apple.com
+    link: /map?id=internet_1
     style: {
       fill: "orange"
     }
   }
   internet_2: What is HTTP? {
+    link: /map?id=internet_2
     style: {
       fill: "orange"
     }
   }
   internet_3: What is Domain Name? {
+    link: /map?id=internet_3
     style: {
       fill: "orange"
     }
   }
   internet_4: What is hosting? {
+    link: /map?id=internet_4
     style: {
       fill: "orange"
     }
   }
   internet_5: DNS and how it works? {
+    link: /map?id=internet_5
     style: {
       fill: "orange"
     }
   }
   internet_6: Browser and how they work? {
+    link: /map?id=internet_6
     style: {
       fill: "orange"
     }
@@ -75,24 +80,28 @@ frontend: Frontend {
   html: HTML
 
   html_1: "Learn the basics" {
+    link: /map?id=html_1
     style: {
       fill: "orange"
     }
   }
 
   html_2: "Writing Semantic HTML" {
+    link: /map?id=html_2
     style: {
       fill: "orange"
     }
   }
 
   html_3: "Accessibility" {
+    link: /map?id=html_3
     style: {
       fill: "orange"
     }
   }
 
   html_4: "SEO Basics" {
+    link: /map?id=html_4
     style: {
       fill: "orange"
     }
@@ -125,18 +134,21 @@ frontend: Frontend {
   css: CSS
 
   css_1: "Learn the basics" {
+    link: /map?id=css_1
     style: {
       fill: "orange"
     }
   }
 
   css_2: "Making Layouts" {
+    link: /map?id=css_2
     style: {
       fill: "orange"
     }
   }
 
   css_3: "Responsive Design" {
+    link: /map?id=css_3
     style: {
       fill: "orange"
     }
@@ -163,18 +175,21 @@ frontend: Frontend {
   js: Javascript
 
   js_1: Learn the Basics {
+    link: /map?id=js_1
     style: {
       fill: "orange"
     }
   }
 
   js_2: Learn DOM Manipulation {
+    link: /map?id=js_2
     style: {
       fill: "orange"
     }
   }
 
   js_3: Fetch API/ Ajax (XHR) {
+    link: /map?id=js_3
     style: {
       fill: "orange"
     }
@@ -199,9 +214,48 @@ frontend: Frontend {
   }
 
   vcshosting: VCS Hosting
+
+  vcshosting_1: GitHub {
+    link: /map?id=vcshosting_1
+    style: {
+      fill: "orange"
+    }
+  }
+  vcshosting_2: GitLab {
+    link: /map?id=vcshosting_2
+    style: {
+      fill: "orange"
+    }
+  }
+  vcshosting_3: Bitbucket {
+    link: /map?id=vcshosting_3
+    style: {
+      fill: "orange"
+    }
+  }
+
+  vcshosting -- vcshosting_1: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  vcshosting -- vcshosting_2: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  vcshosting -- vcshosting_3: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
   vcs: Version Control Systems
 
   vcs_1: Git {
+    link: /map?id=vcs_1
     style: {
       fill: "orange"
     }
@@ -213,17 +267,142 @@ frontend: Frontend {
     }
   }
 
+  package_managers: Package Managers
+
+  vcshosting -> package_managers
+
+  pick_a_framework: Pick a Framework
+
+  package_managers -> pick_a_framework
+
+  react: React {
+    link: /map?id=react
+    style: {
+      fill: "orange"
+    }
+  }
+  vue: Vue.js {
+    link: /map?id=vue
+    style: {
+      fill: "orange"
+    }
+  }
+  angular: Angular {
+    link: /map?id=angular
+    style: {
+      fill: "orange"
+    }
+  }
+
+  svelte: Svelte {
+    link: /map?id=svelte
+    style: {
+      fill: "orange"
+    }
+  }
+
+  solidjs: SolidJS {
+    link: /map?id=solidjs
+    style: {
+      fill: "orange"
+    }
+  }
+
+  qwik: Qwik {
+    link: /map?id=qwik
+    style: {
+      fill: "orange"
+    }
+  }
+
+  pick_a_framework -- react: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  pick_a_framework -- vue: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  pick_a_framework -- angular: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  pick_a_framework -- svelte: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  pick_a_framework -- solidjs: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  pick_a_framework -- qwik: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  writing_css
+
+  pick_a_framework -> writing_css
+
+  tailwind: Tailwind {
+    link: /map?id=tailwind
+    style: {
+      fill: "orange"
+    }
+  }
+  radixui: Radix UI {
+    link: /map?id=radixui
+    style: {
+      fill: "orange"
+    }
+  }
+  shadonui: Shadon UI {
+    link: /map?id=shadonui
+    style: {
+      fill: "orange"
+    }
+  }
+
+  writing_css -- tailwind: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  writing_css -- radixui: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  writing_css -- shadonui: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
   internet -> html
 
   html -> css
   css -> js
-  js -> vcshosting
-  vcshosting -> vcs
+  js -> vcs
+  vcs -> vcshosting
 }
 
-start: Start Roadmap
-end: End Roadmap
+startfrontend: Start of Frontend
+endfrontend: End of Frontend
 
-start -> frontend.internet
+startfrontend -> frontend.internet
 
-frontend.vcs -> end
+tobecontinue: To be continue
+frontend.writing_css -> tobecontinue
+# frontend.vcs -> endfrontend
