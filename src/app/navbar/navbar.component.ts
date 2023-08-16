@@ -21,7 +21,7 @@ export class NavbarComponent {
   ) {
     this.user$.subscribe((user) => {
       if (user) {
-        this.drawer.openStateChange.next(true);
+        // this.drawer.openStateChange.next(true);
         this.drawer.enableProfile(true);
         this.store.dispatch(ProfileActions.countSkills(user.id));
         this.store.dispatch(ProfileActions.listSkills(user.id, ''));

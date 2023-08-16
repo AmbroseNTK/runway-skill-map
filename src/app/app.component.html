@@ -1,12 +1,20 @@
 <tui-root>
-    <app-navbar></app-navbar>
-    <router-outlet>
-    </router-outlet>
-    <div style="position: fixed; bottom: 20px; left: 20px;">
-            <app-zoomer (zoomChange)="zoom($event)"></app-zoomer>
-    </div>
-    <div style="position: fixed; bottom: 20px; right: 20px; background-color: #ffffff6f; backdrop-filter: blur(10px); border-radius: 10px;">
-        <p style="font-weight: bold; padding: 5px;">A product of Runway Club</p>
-    </div>
-    <app-side-drawer></app-side-drawer>
+  <app-navbar></app-navbar>
+  <router-outlet> </router-outlet>
+  <div style="position: fixed; bottom: 20px; left: 20px">
+    <app-zoomer (zoomChange)="zoom($event)" [zoom]="5"></app-zoomer>
+  </div>
+  <div
+    style="
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ffffff6f;
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+    "
+  >
+    <p style="font-weight: bold; padding: 5px">A product of Runway Club</p>
+  </div>
+  <app-side-drawer></app-side-drawer>
 </tui-root>

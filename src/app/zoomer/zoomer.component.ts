@@ -8,6 +8,7 @@ import { FormControl } from '@angular/forms';
 })
 export class ZoomerComponent {
   @Input() zoom = 5;
+
   @Input() zoomMin = 1;
   @Input() zoomMax = 10;
   @Input() zoomStep = 10;
@@ -15,7 +16,7 @@ export class ZoomerComponent {
   hint = 'Dragging slider to zoom in or out';
   @Output() zoomChange = new EventEmitter<number>();
 
-  formControl = new FormControl(this.zoom);
+  formControl = new FormControl(5);
 
   constructor() {
     this.formControl.valueChanges.subscribe((value) => {

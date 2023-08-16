@@ -16,10 +16,16 @@ export class AppComponent {
   title = 'skillmap';
 
   constructor(
-    private zoomService: ZoomService,
+    public zoomService: ZoomService,
     private auth: Auth,
     private store: Store<{ user: UserState }>
   ) {
+    // check if using chromium
+    // if (window.navigator.userAgent.indexOf('Chrome') !== -1) {
+    //   alert(
+    //     'Chromium-based browser may not work properly and laggy may occur :(\nPlease use Firefox or Safari instead.'
+    //   );
+    // }
     // check if user is logged in
     onAuthStateChanged(this.auth, (user) => {
       if (!user) {

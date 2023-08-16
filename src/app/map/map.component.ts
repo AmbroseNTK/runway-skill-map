@@ -1,62 +1,83 @@
-import { Component, HostListener } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostListener,
+  Inject,
+  ViewEncapsulation,
+} from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { debounceTime, fromEvent, take, throttle, throttleTime } from 'rxjs';
+import {
+  BehaviorSubject,
+  debounceTime,
+  fromEvent,
+  map,
+  take,
+  throttle,
+  throttleTime,
+} from 'rxjs';
 import { ZoomService } from '../services/zoom.service';
 import { DrawerService } from '../side-drawer/drawer.service';
 import { Store } from '@ngrx/store';
 import { SkillState } from 'src/redux/states/skill.state';
 import { get } from '../../redux/actions/skill.action';
 import { ProfileState } from 'src/redux/states/profile.state';
+import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.svg',
   styleUrls: ['./map.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MapComponent {
-  width = 2000;
-  height = 2000;
-
-  viewBox = [0, 0, this.width, this.height];
+  baseWidth = 3535;
+  baseHeight = 1555;
 
   zoom = 5;
+  viewBox = [0, 0, this.baseWidth, this.baseHeight];
   accelaration = 0.5;
+
+  readonly coordinates$ = new BehaviorSubject([0, 0]);
+
+  readonly transform$ = this.coordinates$.pipe(
+    map((coords) =>
+      this.sanitizer.bypassSecurityTrustStyle(
+        `translate3d(${coords[0]}px, ${coords[1]}px,0)`
+      )
+    )
+  );
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private zoomService: ZoomService,
     private drawer: DrawerService,
-    private store: Store<{ skill: SkillState; profile: ProfileState }>
+    private store: Store<{ skill: SkillState; profile: ProfileState }>,
+    @Inject(DomSanitizer) private readonly sanitizer: DomSanitizer
   ) {
     activatedRoute.queryParams.subscribe((params: any) => {
       console.log(params);
-      let x1 = params.x1;
-      let y1 = params.y1;
-      let x2 = params.x2;
-      let y2 = params.y2;
+      let x = params.x;
+      let y = params.y;
       let zoom = params.zoom;
-      if (x1 && y1 && x2 && y2) {
+
+      if (x && y) {
+        this.coordinates$.next([parseFloat(x), parseFloat(y)]);
       } else {
-        // check in local storage
-        x1 = parseFloat(window.localStorage.getItem('x1') ?? '0');
-        y1 = parseFloat(window.localStorage.getItem('y1') ?? '0');
-        x2 = parseFloat(
-          window.localStorage.getItem('x2') ?? window.innerWidth.toString()
-        );
-        y2 = parseFloat(
-          window.localStorage.getItem('y2') ?? window.innerHeight.toString()
-        );
-        if (x1 && y1 && x2 && y2) {
-          this.viewBox = [x1, y1, x2, y2];
+        // load from local storage
+        let x = window.localStorage.getItem('x');
+        let y = window.localStorage.getItem('y');
+        if (x && y) {
+          this.coordinates$.next([parseFloat(x), parseFloat(y)]);
         }
       }
       if (zoom) {
-        this.zoomService.setZoom(zoom);
+        this.zoomService.setZoom(parseInt(zoom));
       } else {
-        // check in local storage
-        zoom = parseInt(window.localStorage.getItem('zoom') ?? '5');
+        // load from local storage
+        let zoom = window.localStorage.getItem('zoom');
         if (zoom) {
-          this.zoomService.setZoom(zoom);
+          this.zoomService.setZoom(parseInt(zoom));
         }
       }
 
@@ -68,31 +89,26 @@ export class MapComponent {
       }
     });
 
-    this.width = window.innerWidth;
-    this.height = window.innerHeight;
-
     this.zoomService.zoomChange.subscribe((zoom) => {
       this.zoom = zoom;
-      this.width = (window.innerWidth / zoom) * 10;
-      this.height = (window.innerHeight / zoom) * 10;
-      this.viewBox[2] = this.width;
-      this.viewBox[3] = this.height;
+      console.log('zoomChange', zoom);
+      let width = this.baseWidth / zoom;
+      let heigth = this.baseHeight / zoom;
+      this.viewBox[2] = width;
+      this.viewBox[3] = heigth;
     });
   }
 
   updateParams() {
-    let x1 = this.viewBox[0];
-    let y1 = this.viewBox[1];
-    let x2 = this.viewBox[2];
-    let y2 = this.viewBox[3];
-    // save to local storage
-    window.localStorage.setItem('x1', x1.toString());
-    window.localStorage.setItem('y1', y1.toString());
-    window.localStorage.setItem('x2', x2.toString());
-    window.localStorage.setItem('y2', y2.toString());
+    window.localStorage.setItem('x', this.currentCoords[0].toString());
+    window.localStorage.setItem('y', this.currentCoords[1].toString());
     window.localStorage.setItem('zoom', this.zoom.toString());
     this.router.navigate([], {
-      queryParams: { x1, y1, x2, y2, zoom: this.zoom },
+      queryParams: {
+        x: this.currentCoords[0],
+        y: this.currentCoords[1],
+        zoom: this.zoom,
+      },
     });
   }
 
@@ -102,96 +118,24 @@ export class MapComponent {
   @HostListener('mousedown', ['$event'])
   public onMouseDown(event: MouseEvent) {
     console.log('mousedown');
-    this.isMouseDown = true;
+    // this.isMouseDown = true;
   }
 
   // listen on mouse up
   @HostListener('mouseup', ['$event'])
   public onMouseUp(event: MouseEvent) {
-    this.isMouseDown = false;
+    // this.isMouseDown = false;
+    console.log(this.currentCoords.join(', '));
     this.updateParams();
-  }
-
-  // listen on mouse leave
-  @HostListener('mouseleave', ['$event'])
-  public onMouseLeave(event: MouseEvent) {
-    this.isMouseDown = false;
-  }
-
-  // listen on mouse move
-  @HostListener('mousemove', ['$event'])
-  public onMouseMove(event: MouseEvent) {
-    event.preventDefault();
-    if (!this.isMouseDown) {
-      return;
-    }
-    let deltaX = event.movementX * this.accelaration * (11 - this.zoom);
-    let deltaY = event.movementY * this.accelaration * (11 - this.zoom);
-    // delta x and delta y
-    this.viewBox[0] -= deltaX;
-    this.viewBox[1] -= deltaY;
-    this.viewBox[2] = -deltaX + this.width;
-    this.viewBox[3] = -deltaY + this.height;
-  }
-
-  // listen on touch start
-  @HostListener('touchstart', ['$event'])
-  public onTouchStart(event: TouchEvent) {
-    console.log('touchstart');
-    this.lastTouchX = event.touches[0].clientX;
-    this.lastTouchY = event.touches[0].clientY;
-    this.isMouseDown = true;
+    this.updateParams();
   }
 
   // listen on touch end
   @HostListener('touchend', ['$event'])
   public onTouchEnd(event: TouchEvent) {
-    this.isMouseDown = false;
+    // this.isMouseDown = false;
+
     this.updateParams();
-  }
-
-  lastTouchX = 0;
-  lastTouchY = 0;
-  // listen on touch move
-  @HostListener('touchmove', ['$event'])
-  public onTouchMove(event: TouchEvent) {
-    console.log('touchmove');
-    // event.preventDefault();
-    if (!this.isMouseDown) {
-      return;
-    }
-    // delta x and delta y
-    let deltaX = event.touches[0].clientX - this.lastTouchX;
-    let deltaY = event.touches[0].clientY - this.lastTouchY;
-    deltaX = deltaX * this.accelaration * (11 - this.zoom);
-    deltaY = deltaY * this.accelaration * (11 - this.zoom);
-    this.lastTouchX = event.touches[0].clientX;
-    this.lastTouchY = event.touches[0].clientY;
-    this.viewBox[0] -= deltaX;
-    this.viewBox[1] -= deltaY;
-    this.viewBox[2] = -deltaX + this.width;
-    this.viewBox[3] = -deltaY + this.height;
-  }
-
-  @HostListener('wheel', ['$event'])
-  public onScroll(event: WheelEvent) {
-    event.preventDefault();
-    this.viewBox[0] += event.deltaX;
-    this.viewBox[1] += event.deltaY;
-    this.viewBox[2] = event.deltaX + this.width;
-    this.viewBox[3] = event.deltaY + this.height;
-
-    if (this.viewBox[0] < 0) {
-      this.viewBox[0] = 0;
-      this.viewBox[2] = this.width;
-    }
-
-    if (this.viewBox[1] < 0) {
-      this.viewBox[1] = 0;
-      this.viewBox[3] = this.height;
-    }
-
-    console.log(this.viewBox);
   }
 
   selectSkill(id: string) {
@@ -200,5 +144,22 @@ export class MapComponent {
 
   getViewBoxProp() {
     return this.viewBox.join(' ');
+  }
+
+  // onPan(delta: readonly [number, number]): void {
+  //   this.coordinates$.next([delta[0], delta[1]]);
+  // }
+  onPan(delta: readonly [number, number]): void {
+    this.coordinates$.next([
+      this.currentCoords[0] + delta[0],
+      this.currentCoords[1] + delta[1],
+    ]);
+  }
+  get currentCoords(): number[] {
+    return this.coordinates$.value;
+  }
+
+  getSize() {
+    return `${(this.zoom * 100) / 5}%`;
   }
 }

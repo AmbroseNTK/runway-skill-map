@@ -44,7 +44,7 @@ import { provideMessaging, getMessaging } from '@angular/fire/messaging';
 import { providePerformance, getPerformance } from '@angular/fire/performance';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 import { TuiSidebarModule, TuiTabBarModule } from '@taiga-ui/addon-mobile';
-import { TuiActiveZoneModule } from '@taiga-ui/cdk';
+import { TuiActiveZoneModule, TuiPanModule } from '@taiga-ui/cdk';
 import { SideDrawerComponent } from './side-drawer/side-drawer.component';
 import { userReducer } from 'src/redux/reducers/user.reducer';
 import { UserEffects } from 'src/redux/effects/user.effect';
@@ -86,6 +86,8 @@ import { ProfileEffects } from 'src/redux/effects/profile.effect';
     TuiAvatarModule,
     TuiIslandModule,
     TuiProgressModule,
+    TuiPanModule,
+    TuiAlertModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
