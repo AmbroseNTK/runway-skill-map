@@ -21,3 +21,16 @@ export const countFailure = createAction(
     error,
   })
 );
+
+export const create = createAction('[Skill] Create', (skill: Skill) => ({
+  skill,
+}));
+
+export const createSuccess = createAction('[Skill] Create Success');
+
+export const createFailure = createAction(
+  '[Skill] Create Failure',
+  (error: any) => ({
+    error,
+  })
+);

@@ -7,6 +7,8 @@ export const initialState: SkillState = {
   selectedSkillLoading: false,
   selectedSkillError: '',
   countedSkills: 0,
+  creating: false,
+  createError: '',
 };
 
 export const skillReducer = createReducer(
@@ -36,5 +38,21 @@ export const skillReducer = createReducer(
     ...state,
     selectedSkillError: action.error,
     countedSkills: 0,
+  })),
+  on(SkillActions.create, (state) => ({
+    ...state,
+    creating: true,
+    createError: '',
+  })),
+  on(SkillActions.createSuccess, (state) => ({
+    ...state,
+    creating: false,
+    createError: '',
+  })),
+  on(SkillActions.createFailure, (state, action) => ({
+    ...state,
+    selectedSkillError: action.error,
+    creating: false,
+    createError: action.error,
   }))
 );

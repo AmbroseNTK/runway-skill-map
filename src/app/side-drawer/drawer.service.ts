@@ -12,6 +12,8 @@ export class DrawerService {
   showInfo: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   showProfile: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
+  selectedSkillId = '';
+
   constructor() {}
 
   close() {

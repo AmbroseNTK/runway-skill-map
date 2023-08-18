@@ -12,6 +12,8 @@ import * as SkillActions from 'src/redux/actions/skill.action';
 import { Timestamp } from '@angular/fire/firestore';
 
 import * as UserActions from 'src/redux/actions/user.action';
+import { ConfigsState } from 'src/redux/states/configs.state';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-side-drawer',
@@ -25,6 +27,7 @@ export class SideDrawerComponent {
       skill: SkillState;
       profile: ProfileState;
       user: UserState;
+      configs: ConfigsState;
     }>
   ) {
     // combine user$ and selectedSkill$ to check if the skill is checked
@@ -35,6 +38,23 @@ export class SideDrawerComponent {
         }
       }
     );
+
+    combineLatest([this.user$, this.config$, this.selectedSkill$]).subscribe(
+      ([user, config, skill]) => {
+        if (user && config) {
+          console.log('user', user);
+          console.log('config', config);
+          console.log('skill', skill);
+          if (config.adminIds.includes(user.id)) {
+            this.isAdmin = true;
+            if (!skill) {
+              this.allowToCreateSkill = true;
+            }
+          }
+        }
+      }
+    );
+
     this.store.dispatch(SkillActions.count());
     this.skillList$.subscribe((skills) => {
       for (let skill of skills) {
@@ -45,6 +65,11 @@ export class SideDrawerComponent {
       }
     });
   }
+
+  isAdmin = false;
+
+  allowToCreateSkill = false;
+
   selectedIndex = 0;
 
   selectedSkill$ = this.store.select((state) => state.skill.selectedSkill);
@@ -60,13 +85,23 @@ export class SideDrawerComponent {
   worldmapProgress$ = of(this.countAllSkills$, this.countMySkills$).pipe(
     combineLatestAll(),
     map(([all, my]) => {
-      return (my / all) * 100;
+      return Math.round((my / all) * 10000) / 100;
     })
   );
 
   skillList$ = this.store.select((state) => state.profile.skillList);
 
   loadedSkillList: Skill[] = [];
+
+  config$ = this.store.select((state) => state.configs.current);
+
+  links: FormControl[] = [];
+
+  createSkillForm = new FormGroup({
+    name: new FormControl(''),
+    description: new FormControl(''),
+    parentId: new FormControl(''),
+  });
 
   checkSkill(uid: string, skill: Skill) {
     let clonedSkill = {
@@ -97,5 +132,28 @@ export class SideDrawerComponent {
     this.store.dispatch(UserActions.logout());
     this.loadedSkillList = [];
     window.location.href = '/';
+  }
+
+  addLink() {
+    this.links.push(new FormControl(''));
+  }
+
+  createSkill() {
+    let skill = this.createSkillForm.value as Skill;
+    skill.addedDate = new Date();
+    skill.id = this.drawer.selectedSkillId;
+    skill.links = this.links.filter((l) => l.value != '').map((l) => l.value);
+    console.log(skill);
+    this.store.dispatch(SkillActions.create(skill));
+    this.drawer.openStateChange.next(false);
+  }
+
+  editSkill(editedSkill: Skill) {
+    this.createSkillForm.patchValue(editedSkill);
+    this.links = [];
+    for (let link of editedSkill.links) {
+      this.links.push(new FormControl(link));
+    }
+    this.allowToCreateSkill = true;
   }
 }

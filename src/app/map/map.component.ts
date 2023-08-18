@@ -86,6 +86,7 @@ export class MapComponent {
         this.store.dispatch(get(id));
         this.drawer.openStateChange.next(true);
         this.drawer.enableInfo(true);
+        this.drawer.selectedSkillId = id;
       }
     });
 

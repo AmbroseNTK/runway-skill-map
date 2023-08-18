@@ -32,8 +32,9 @@
     </tui-tabs>
     <div *ngIf="selectedIndex == 0">
       <div *ngIf="!(selectedSkill$ | async)">
-        <p>Data is not available right now</p>
+        <p *ngIf="!allowToCreateSkill">Data is not available right now</p>
       </div>
+
       <div *ngIf="selectedSkill$ | async as skill" style="padding: 10px">
         <tui-island>
           <p class="tui-island__category">{{ skill.parentId }}</p>
@@ -70,7 +71,61 @@
           >
             Uncheck as completed
           </button>
+          <button
+            *ngIf="isAdmin"
+            tuiButton
+            type="button"
+            appearance="primary"
+            class="tui-space_right-3 tui-space_bottom-3"
+            (click)="editSkill(skill)"
+          >
+            Edit
+          </button>
         </span>
+      </div>
+      <div *ngIf="allowToCreateSkill">
+        <form [formGroup]="createSkillForm">
+          <tui-input formControlName="parentId" tuiHintContent="Parent ID">
+            Parent Id
+            <input tuiTextfield placeholder="Parent Id" />
+          </tui-input>
+          <tui-input formControlName="name" tuiHintContent="Skill name">
+            Skill name
+            <input tuiTextfield placeholder="Skill name" />
+          </tui-input>
+          <tui-input formControlName="description" tuiHintContent="Description">
+            Description
+            <input tuiTextfield placeholder="Description" />
+          </tui-input>
+          <br />
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <h3>Links *leave blank to omit</h3>
+            <button tuiButton size="s" (click)="addLink()">Add link</button>
+          </div>
+          <tui-input
+            *ngFor="let linkFormControl of links; let i = index"
+            [formControl]="linkFormControl"
+            tuiHintContent="Link {{ i + 1 }}"
+          >
+            Link {{ i + 1 }}
+            <input tuiTextfield placeholder="Link {{ i + 1 }}" />
+          </tui-input>
+        </form>
+        <button
+          tuiButton
+          size="m"
+          style="margin: 10px; float: right"
+          (click)="createSkill()"
+        >
+          Create
+        </button>
       </div>
     </div>
     <div *ngIf="selectedIndex == 1">

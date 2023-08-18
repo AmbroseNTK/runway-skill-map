@@ -6,6 +6,7 @@ import {
   collection,
   doc,
   getCountFromServer,
+  setDoc,
 } from '@angular/fire/firestore';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, from, map, mergeMap, of } from 'rxjs';
@@ -40,6 +41,20 @@ export class SkillEffects {
       }),
       map((count) => SkillActions.countSuccess(count.data().count)),
       catchError((error) => of(SkillActions.countFailure(error)))
+    )
+  );
+
+  createSkill$ = createEffect(() =>
+    this.action$.pipe(
+      ofType(SkillActions.create),
+      mergeMap((action) => {
+        let skillCollection = collection(this.firestore, 'skills');
+        return from(
+          setDoc(doc(skillCollection, action.skill.id), action.skill)
+        );
+      }),
+      map(() => SkillActions.createSuccess()),
+      catchError((error) => of(SkillActions.createFailure(error)))
     )
   );
 }

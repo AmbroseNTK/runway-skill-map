@@ -6,6 +6,8 @@ import { loginSuccess } from 'src/redux/actions/user.action';
 import { Auth, onAuthStateChanged } from '@angular/fire/auth';
 import { UserState } from 'src/redux/states/user.state';
 import { User } from 'src/models/user.model';
+import { ConfigsState } from 'src/redux/states/configs.state';
+import * as ConfigsActions from 'src/redux/actions/configs.action';
 
 @Component({
   selector: 'app-root',
@@ -18,15 +20,9 @@ export class AppComponent {
   constructor(
     public zoomService: ZoomService,
     private auth: Auth,
-    private store: Store<{ user: UserState }>
+    private store: Store<{ user: UserState; configs: ConfigsState }>
   ) {
-    // check if using chromium
-    // if (window.navigator.userAgent.indexOf('Chrome') !== -1) {
-    //   alert(
-    //     'Chromium-based browser may not work properly and laggy may occur :(\nPlease use Firefox or Safari instead.'
-    //   );
-    // }
-    // check if user is logged in
+    this.store.dispatch(ConfigsActions.fetch());
     onAuthStateChanged(this.auth, (user) => {
       if (!user) {
         return;

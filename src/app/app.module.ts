@@ -53,6 +53,12 @@ import { skillReducer } from 'src/redux/reducers/skill.reducer';
 import { SkillEffects } from 'src/redux/effects/skill.effect';
 import { profileReducer } from 'src/redux/reducers/profile.reducer';
 import { ProfileEffects } from 'src/redux/effects/profile.effect';
+import { configReducer } from 'src/redux/reducers/configs.reducer';
+import {
+  getRemoteConfig,
+  provideRemoteConfig,
+} from '@angular/fire/remote-config';
+import { ConfigsEffects } from 'src/redux/effects/configs.effect';
 
 @NgModule({
   declarations: [
@@ -95,16 +101,23 @@ import { ProfileEffects } from 'src/redux/effects/profile.effect';
     provideMessaging(() => getMessaging()),
     providePerformance(() => getPerformance()),
     provideStorage(() => getStorage()),
+    provideRemoteConfig(() => getRemoteConfig()),
     StoreModule.forRoot(
       {
         user: userReducer,
         meta: metaReducer,
         skill: skillReducer,
         profile: profileReducer,
+        configs: configReducer,
       },
       {}
     ),
-    EffectsModule.forRoot([UserEffects, SkillEffects, ProfileEffects]),
+    EffectsModule.forRoot([
+      UserEffects,
+      SkillEffects,
+      ProfileEffects,
+      ConfigsEffects,
+    ]),
   ],
   providers: [
     { provide: TUI_SANITIZER, useClass: NgDompurifySanitizer },

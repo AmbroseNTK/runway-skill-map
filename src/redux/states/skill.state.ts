@@ -5,4 +5,6 @@ export interface SkillState {
   selectedSkillLoading: boolean;
   selectedSkillError: any;
   countedSkills: number;
+  creating: boolean;
+  createError: any;
 }
