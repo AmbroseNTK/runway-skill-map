@@ -30,8 +30,8 @@ import { DomSanitizer } from '@angular/platform-browser';
   // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MapComponent {
-  baseWidth = 3535;
-  baseHeight = 1555;
+  baseWidth = 9362;
+  baseHeight = 2473;
 
   zoom = 5;
   viewBox = [0, 0, this.baseWidth, this.baseHeight];

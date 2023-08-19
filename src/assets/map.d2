@@ -390,6 +390,682 @@ frontend: Frontend {
     }
   }
 
+  css_architecture: CSS Architecture
+
+  writing_css -> css_architecture
+
+  BEM: BEM {
+    link: /map?id=bem
+    style: {
+      fill: "orange"
+    }
+  }
+
+  css_architecture -- BEM: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  css_preprocessors: CSS Preprocessors
+
+  css_architecture -> css_preprocessors
+
+  SASS: SASS {
+    link: /map?id=sass
+    style: {
+      fill: "orange"
+    }
+  }
+  PostCSS: PostCSS {
+    link: /map?id=postcss
+    style: {
+      fill: "orange"
+    }
+  }
+
+  css_preprocessors -- SASS: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  css_preprocessors -- PostCSS: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  build_tools: Build tools
+
+  css_preprocessors -> build_tools
+
+  module_bundler: Module bundlers
+
+  build_tools -- module_bundler
+
+  task_runners: Task Runners
+
+  build_tools -- task_runners
+
+  linters_and_formatters: Linters and Formatters
+
+  build_tools -- linters_and_formatters
+
+  vite: Vite {
+    link: /map?id=vite
+    style: {
+      fill: "orange"
+    }
+  }
+
+  esbuild: esbuild {
+    link: /map?id=esbuild
+    style: {
+      fill: "orange"
+    }
+  }
+
+  webpack: Webpack {
+    link: /map?id=webpack
+    style: {
+      fill: "orange"
+    }
+  }
+
+  rollup: Rollup {
+    link: /map?id=rollup
+    style: {
+      fill: "orange"
+    }
+  }
+
+  parcel: Parcel {
+    link: /map?id=parcel
+    style: {
+      fill: "orange"
+    }
+  }
+
+  npm_scripts: NPM Scripts {
+    link: /map?id=npm_scripts
+    style: {
+      fill: "orange"
+    }
+  }
+  prettier: Prettier {
+    link: /map?id=prettier
+    style: {
+      fill: "orange"
+    }
+  }
+  eslint: ESLint {
+    link: /map?id=eslint
+    style: {
+      fill: "orange"
+    }
+  }
+
+  module_bundler -- vite: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  module_bundler -- esbuild: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  module_bundler -- webpack: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  module_bundler -- rollup: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  module_bundler -- parcel: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  task_runners -- npm_scripts: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  linters_and_formatters -- prettier: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  linters_and_formatters -- eslint: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  testing_your_apps: Testing your apps
+
+  linters_and_formatters -> testing_your_apps
+
+  vitest: Vitest {
+    link: /map?id=vitest
+    style: {
+      fill: "orange"
+    }
+  }
+  jest: Jest {
+    link: /map?id=jest
+    style: {
+      fill: "orange"
+    }
+  }
+  playwright: Playwright {
+    link: /map?id=playwright
+    style: {
+      fill: "orange"
+    }
+  }
+  cypress: Cypress {
+    link: /map?id=cypress
+    style: {
+      fill: "orange"
+    }
+  }
+
+  testing_your_apps -- vitest: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  testing_your_apps -- jest: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  testing_your_apps -- playwright: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  testing_your_apps -- cypress: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  authentication_strategies: Authentication Strategies
+
+  testing_your_apps -> authentication_strategies
+
+  web_security_basics: Web Security Basics
+
+  authentication_strategies -> web_security_basics
+
+  cors: CORS {
+    link: /map?id=cors
+    style: {
+      fill: "orange"
+    }
+  }
+  https: HTTPS {
+    link: /map?id=https
+    style: {
+      fill: "orange"
+    }
+  }
+  content_security_policy: Content Security Policy {
+    link: /map?id=content_security_policy
+    style: {
+      fill: "orange"
+    }
+  }
+  owasp_security_risks: OWASP Security Risks {
+    link: /map?id=owasp_security_risks
+    style: {
+      fill: "orange"
+    }
+  }
+
+  web_security_basics -- cors: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  web_security_basics -- https: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  web_security_basics -- content_security_policy: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  web_security_basics -- owasp_security_risks: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  web_components: Web Components
+
+  web_security_basics -> web_components
+
+  html_templates: "HTML Templates" {
+    link: /map?id=html_templates
+    style: {
+      fill: "orange"
+    }
+  }
+  custom_elements: "Custom Elements" {
+    link: /map?id=custom_elements
+    style: {
+      fill: "orange"
+    }
+  }
+  shadow_dom: "Shadow DOM" {
+    link: /map?id=shadow_dom
+    style: {
+      fill: "orange"
+    }
+  }
+
+  web_components -- html_templates: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  web_components -- custom_elements: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  web_components -- shadow_dom: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  type_checkers: Type Checkers
+
+  web_components -> type_checkers
+
+  typescript: Typescript {
+    link: /map?id=typescript
+    style: {
+      fill: "orange"
+    }
+  }
+
+  type_checkers -- typescript: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  server_side_rendering: Server Side Rendering
+
+  type_checkers -> server_side_rendering
+
+  nextjs: Next.js {
+    link: /map?id=nextjs
+    style: {
+      fill: "orange"
+    }
+  }
+  remix: React Remix {
+    link: /map?id=react_remix
+    style: {
+      fill: "orange"
+    }
+  }
+  angular_universal: Angular Universal {
+    link: /map?id=angular_universal
+    style: {
+      fill: "orange"
+    }
+  }
+  nuxtjs: Nuxt.js {
+    link: /map?id=nuxtjs
+    style: {
+      fill: "orange"
+    }
+  }
+  sveltekit: Svelte Kit {
+    link: /map?id=sveltekit
+    style: {
+      fill: "orange"
+    }
+  }
+
+  server_side_rendering -- nextjs: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  server_side_rendering -- remix: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  server_side_rendering -- angular_universal: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  server_side_rendering -- nuxtjs: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  server_side_rendering -- sveltekit: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  graphql: GraphQL
+  server_side_rendering -> graphql
+
+  apollo: Apollo {
+    link: /map?id=apollo
+    style: {
+      fill: "orange"
+    }
+  }
+  relay_modern: Relay Modern {
+    link: /map?id=relay_modern
+    style: {
+      fill: "orange"
+    }
+  }
+  graphql -- apollo: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  graphql -- relay_modern: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  static_site_generators: Static Site Generators
+  graphql -> static_site_generators
+
+  vuepress: Vuepress: {
+    link: /map?id=vuepress
+    style: {
+      fill: "orange"
+    }
+  }
+  jekyll: Jekyll: {
+    link: /map?id=jekyll
+    style: {
+      fill: "orange"
+    }
+  }
+  hugo: Hugo: {
+    link: /map?id=hugo
+    style: {
+      fill: "orange"
+    }
+  }
+  astro: Astro: {
+    link: /map?id=astro
+    style: {
+      fill: "orange"
+    }
+  }
+  eleventy: Eleventy: {
+    link: /map?id=eleventy
+    style: {
+      fill: "orange"
+    }
+  }
+
+  static_site_generators -- vuepress: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  static_site_generators -- jekyll: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  static_site_generators -- hugo: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  static_site_generators -- astro: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  static_site_generators -- eleventy: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  progressive_web_apps: Progressive Web Apps
+
+  static_site_generators -> progressive_web_apps
+
+  storage: Storage: {
+    link: /map?id=pwa_storage
+    style: {
+      fill: "orange"
+    }
+  }
+  web_sockets: Web Sockets: {
+    link: /map?id=websocket
+    style: {
+      fill: "orange"
+    }
+  }
+  server_sent_events: Server Sent Events: {
+    link: /map?id=sse
+    style: {
+      fill: "orange"
+    }
+  }
+  service_workers: Service Workers: {
+    link: /map?id=service_workers
+    style: {
+      fill: "orange"
+    }
+  }
+  location: Location: {
+    link: /map?id=pwa_location
+    style: {
+      fill: "orange"
+    }
+  }
+  notification: Notification: {
+    link: /map?id=pwa_notification
+    style: {
+      fill: "orange"
+    }
+  }
+  payment: Payment: {
+    link: /map?id=pwa_payment
+    style: {
+      fill: "orange"
+    }
+  }
+  credentials: Credentials: {
+    link: /map?id=pwa_credentials
+    style: {
+      fill: "orange"
+    }
+  }
+  performance_metrics: Performance Metrics: {
+    link: /map?id=pwa_perf_metrics
+    style: {
+      fill: "orange"
+    }
+  }
+  dev_tools: DevTools: {
+    link: /map?id=pwa_devtools
+    style: {
+      fill: "orange"
+    }
+  }
+  lighthouse: Lighthouse: {
+    link: /map?id=pwa_lighthouse
+    style: {
+      fill: "orange"
+    }
+  }
+
+  progressive_web_apps -- storage: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  progressive_web_apps -- web_sockets: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  progressive_web_apps -- server_sent_events: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  progressive_web_apps -- service_workers: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  progressive_web_apps -- location: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  progressive_web_apps -- notification: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  progressive_web_apps -- payment: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  progressive_web_apps -- credentials: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  progressive_web_apps -- performance_metrics: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  progressive_web_apps -- dev_tools: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  progressive_web_apps -- lighthouse: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  mobile_applications: Mobile Applications
+
+  progressive_web_apps -> mobile_applications
+
+  react_native: React Native: {
+    link: /map?id=react_native
+    style: {
+      fill: "orange"
+    }
+  }
+  flutter: Flutter: {
+    link: /map?id=flutter
+    style: {
+      fill: "orange"
+    }
+  }
+  ionic: Ionic: {
+    link: /map?id=ionic
+    style: {
+      fill: "orange"
+    }
+  }
+  native_script: NativeScript: {
+    link: /map?id=native_script
+    style: {
+      fill: "orange"
+    }
+  }
+
+  mobile_applications -- react_native: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  mobile_applications -- flutter: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  mobile_applications -- ionic: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  mobile_applications -- native_script: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
+  desktop_applications: Desktop Applications
+
+  mobile_applications -> desktop_applications
+
+  electron: Electron: {
+    link: /map?id=electron
+    style: {
+      fill: "orange"
+    }
+  }
+  tauri: Tauri: {
+    link: /map?id=tauri
+    style: {
+      fill: "orange"
+    }
+  }
+
+  desktop_applications -- electron: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  desktop_applications -- tauri: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+  desktop_applications -- flutter: {
+    style: {
+      stroke-dash: 3
+    }
+  }
+
   internet -> html
 
   html -> css
@@ -398,11 +1074,11 @@ frontend: Frontend {
   vcs -> vcshosting
 }
 
-startfrontend: Start of Frontend
-endfrontend: End of Frontend
+startfrontend: Start of the Frontend Kingdom
+endfrontend: End of the Frontend Kingdom
 
 startfrontend -> frontend.internet
 
-tobecontinue: To be continue
-frontend.writing_css -> tobecontinue
-# frontend.vcs -> endfrontend
+# tobecontinue: To be continue
+# frontend.graphql -> tobecontinue
+frontend.desktop_applications -> endfrontend

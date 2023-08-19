@@ -10,7 +10,7 @@ export class ZoomerComponent {
   @Input() zoom = 5;
 
   @Input() zoomMin = 1;
-  @Input() zoomMax = 10;
+  @Input() zoomMax = 30;
   @Input() zoomStep = 10;
   quantum = 1;
   hint = 'Dragging slider to zoom in or out';
